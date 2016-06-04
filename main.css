@@ -1,0 +1,465 @@
+* {
+  font-family: 'Lato';
+}
+/* Scroller code */
+.container {
+  /*background-color: purple;*/
+}
+
+#graphic {
+  padding-top: 10px;
+}
+
+
+#sections {
+  position: relative;
+  display: inline-block;
+  width: 250px;
+  top: 0px;
+  z-index: 90;
+  padding-bottom: 200px;
+}
+
+.step {
+  margin-bottom: 200px;
+  font-family: "TiemposTextWeb-Regular","Georgia";
+  font-size: 16px;
+  line-height: 23px;
+  color: #767678;
+}
+
+#sections .title {
+  font-family: Arial,Helvetica,"san-serif";
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 2px;
+  color: #262626;
+  line-height: 1.2em;
+}
+
+#extra-space {
+  height: 300px;
+}
+
+#vis, #vis2 {
+  display: inline-block;
+  position: fixed;
+  top: 60px;
+  z-index: 1;
+  margin-left: 0;
+}
+#vis {
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+}
+
+#vis1 {
+  position: fixed;
+  top: 0px;
+  margin-left: 55%;
+  z-index: 2000000;
+  -webkit-transform: translate(-50%);
+}
+
+#vis .title {
+  font-size:120px;
+  text-anchor: middle;
+}
+
+#vis .sub-title {
+  font-size:80px;
+  text-anchor: middle;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #666;
+  shape-rendering: crispEdges;
+}
+
+.highlight {
+  fill: #008080;
+  font-weight: bold;
+}
+
+.cough-arrow {
+  stroke: #000;
+  stroke-width: 4px;
+
+}
+
+/* Styling */
+
+.container {
+  width: 1300px;
+}
+#graphic {
+  margin: 0 auto;
+}
+.title {
+  font-weight: bold;
+}
+
+.graph-icon {
+  dominant-baseline: middle;
+}
+.country-text {
+  writing-mode: tb;
+  font-size: 12px;
+  
+}
+
+.smoke, .smokeduplicate, .thermsmoke {
+  -webkit-animation: smoking 3s infinite;
+  -webkit-transition: all 0.5s;
+}
+
+@-webkit-keyframes smoking {
+  0% {
+    opacity: 1;
+    transform: scale(0.2) translate(none);
+  }
+  100% {
+    opacity: 0.0;
+    transform: translate(0, -200px) scale(1);
+  }
+}
+
+
+#SAMPLE {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  background-color: black;
+  padding: 20px;
+  color: white;
+  display: none;
+}
+
+path {
+  fill: none;
+}
+ 
+.axis path,
+.axis line {
+  fill: none;
+  stroke: grey;
+  stroke-width: 1;
+  shape-rendering: crispEdges;
+}
+.y.axis path{
+  display: none; 
+}
+.axis .minor line {
+  stroke: #777;
+  stroke-dasharray: 2,2;
+}
+
+.Europe {
+  fill: #4897D8;
+}
+.America {
+  fill: #CF3721;
+}
+.Asia {
+  fill: #F9BA32;
+}
+.Africa {
+  fill: black;
+}
+.Antarctica {
+  fill: aquamarine;
+}
+.SouthAmerica {
+  fill: green;
+}
+.Australia {
+  fill: pink;
+}
+
+#thermometer1 {
+  position: fixed;
+  right: 50px;
+  top: 50px;
+  width: 50px;
+  height: 200px;
+  opacity: 0;
+  z-index: 91;
+  -webkit-transition: all 0.6s;
+}
+.shown {
+  opacity: 1 !important;
+}
+.tleft {
+  right: 100px !important;
+  opacity: 1 !important;
+  top: 120px !important;
+  width: 300px !important;
+  height: 250px !important;
+}
+.big {
+  right: 0px !important;
+  top: 0px !important;
+  width: 100% !important;
+  height: 100% !important;
+  /*-webkit-transition: all 0s !important;*/
+  /*-webkit-transition: opacity 0.5s !important;*/
+  opacity: 1 !important;
+}
+#thermometer2 {
+  position: fixed;
+  right: 10px;
+  top: 50px;
+  width: 50px;
+  height: 200px;
+  opacity: 0;
+  -webkit-transition: all 0.6s;
+}
+.tright {
+  right: 600px !important;
+  top: 120px !important;
+  width: 300px !important;
+  height: 250px !important;
+  opacity: 1 !important;
+}
+#overview {
+  z-index: 2000000;
+  position: fixed;
+  top: 0px;
+  text-align: center;
+  width: 100%;
+}
+#description {
+  z-index: 2000000;
+  position: fixed;
+  top:150px;
+  left:20px;
+  font-size: 30px;
+  color: #F1F1F2;
+  text-align: left;
+  width: 100%;
+}
+#explanation{
+  z-index: 2000000;
+  position: fixed;
+  top:250px;
+  left:20px;
+  font-size: 20px;
+  color: #F1F1F2;
+  text-align: center;
+  text-align: justify;
+  width: 90%;
+}
+
+#hint{
+  z-index: 2000000;
+  position: fixed;
+  top:400px;
+  left:0px;
+  font-size: 15px;
+  color: #F1F1F2;
+  text-align: center;
+  width: 100%;
+  span {
+  content: "\2193";}
+}
+#source{
+  z-index: 2000000;
+  position: fixed;
+  top:600px;
+  right:10px;
+  font-size: 10px;
+  color: #F1F1F2;
+  text-align: right;
+  width: 100%;
+}
+
+#title {
+  z-index: 2000000;
+  position: fixed;
+  top: 40px;
+  font-size: 50px;
+  font-family: "Arial Black";
+  color: black;
+  text-align: left;
+  width: 100%;
+}
+
+#world1 img {
+  position: fixed;
+  top: 590px;
+  width: 70px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  -webkit-transition: all 1s;
+  z-index: 92;
+}
+#world1 .smoke {
+  top: 540px;
+  z-index: 92;
+}
+.small {
+  width: 0px !important;
+  -webkit-transition: all 0.3s !important;
+}
+.thermworld1, .thermworld2, .thermsmoke {
+  position: fixed;
+  top: 600px;
+  width: 70px;
+  margin: 0 auto;
+  left: 0px;
+  right: 200px;
+}
+.thermworld1, .thermsmoke1 {
+  left: 800px;
+  right: 0px;
+}
+#thermworld1, #thermworld2 {
+  opacity: 0;
+  -webkit-transition: all 1s;
+}
+.thermsmoke1, .thermsmoke2 {
+  top: 560px;
+}
+
+#thermtext1, #thermtext2{
+  position: fixed;
+  top: 40px;
+  width: 300px;
+  margin: 0 auto;
+  left: 0px;
+  right: 200px;
+  opacity: 0;
+  font-size: 20px;
+  color: black;
+  font-weight: bold;
+}
+#thermtext3, #thermtext4{
+  position: fixed;
+  top: 70px;
+  width: 300px;
+  margin: 0 auto;
+  left: 0px;
+  right: 200px;
+  opacity: 0;
+  font-size: 10px;
+  color: black;
+}
+#thermlable {
+  position: fixed;
+  top: 20px;
+  width: 300px;
+  margin: 0 auto;
+  left: 1150px;
+  opacity: 0;
+  font-size: 10px;
+  color: black;
+}
+#thermlable2 {
+  position: fixed;
+  top: 50px;
+  width: 300px;
+  margin: 0 auto;
+  left: 1150px;
+  opacity: 0;
+  font-size: 10px;
+  color: black;
+}
+#thermtext1 {
+  left: 775px;
+  right: 0px;
+}
+#thermtext2 {
+  left: -225px;
+  right: 0px;
+}
+#thermtext3 {
+  left: 780px;
+  right: 0px;
+}
+#thermtext4 {
+  left: -218px;
+  right: 0px;
+}
+#end {
+  position: fixed;
+  top: 400px;
+  width: 1200px;
+  height: 1000
+  margin: 0 auto;
+  left: 500px;
+  opacity: 0;
+  font-size: 10px;
+  color: black;
+}
+#end1{
+  position: fixed;
+  top: 400px;
+  left: 300px;
+}
+#end2{
+  position: fixed;
+  top: 400px;
+  left: 600px;
+}
+#endtext1 {
+  position: fixed;
+  top: 70px;
+  width: 1200px;
+  margin: 0 auto;
+  left: 300px;
+  font-size: 25px;
+  color: #520a0a;
+  font-weight: bold;
+}
+#endtext2 {
+  position: fixed;
+  top: 110px;
+  width: 1200px;
+  margin: 0 auto;
+  left: 300px;
+  font-size: 20px;
+  color: #520a0a;
+}
+.tooltip rect {
+  fill: #666;
+  z-index: 500000000000;
+}
+.tooltip text {
+  font-size: 12px;
+  fill: #fff;
+  font-weight: lighter;
+  font-family: 'Lato';
+  letter-spacing: '4px';
+  z-index: 500000000000;
+}
+.co2label {
+  font-weight: normal !important;
+}
+#smokelable {
+  position: fixed;
+  top: 300px;
+  left: 300px;
+  font-size: 20px;
+  color: black;
+}
+#continenttab, #ranktab {
+  font-size: 20px;
+  color: black;
+  padding: 10px;
+  position: fixed;
+  top: 290px;
+  left: 470px;
+  z-index: 50000000000000000;
+  cursor: pointer;
+  color: #999;
+}
+.active {
+  text-decoration: underline;
+  color: #520A0A !important;
+}
+#continenttab {
+  left: 530px;
+}
